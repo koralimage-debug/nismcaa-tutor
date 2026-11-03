@@ -1,18 +1,18 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>NISMCAA Tutor · Teaching Board (preview)</title>
 <style>html,body{margin:0;height:100%;font-family:Arial,sans-serif;overflow:hidden}body{display:flex;flex-direction:column;background:#182947}
 .tb{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:6px 8px;background:#182947;color:#fff}.tb b{color:#ffdb67}button,select{min-height:44px;border-radius:10px;border:1px solid #ccc;background:#fff;font-weight:700;padding:0 10px;cursor:pointer}button.sel{outline:3px solid #ffdb67}
-.sw{width:44px;padding:0}#back{display:inline-flex;align-items:center;min-height:44px;padding:0 10px}.pv{background:#ffdb67;color:#182947;font-size:.72rem;font-weight:800;border-radius:8px;padding:3px 8px}#cv{flex:1;touch-action:none;display:block;width:100%}.note{color:#b8c7df;font-size:.75rem;padding:2px 8px}a{color:#ffdb67}</style></head><body><div class="prev" style="background:#ffd34d;color:#16264a;text-align:center;font:700 12px/1.3 system-ui,sans-serif;padding:3px 8px">PREVIEW – NISMCAA Tutor is in testing. Demo only: no real bookings or payments.</div>
-<div class="tb"><b>NISMCAA Tutor · Teaching Board</b><span class="pv">Preview – same device only</span>
+.sw{width:44px;padding:0}#back{display:inline-flex;align-items:center;min-height:44px;padding:0 10px}.pv{background:#ffdb67;color:#182947;font-size:.72rem;font-weight:800;border-radius:8px;padding:3px 8px}#cv{flex:1;touch-action:none;display:block;width:100%}.note{color:#b8c7df;font-size:.75rem;padding:2px 8px}a{color:#ffdb67}</style></head><body><div class="prev" style="background:#ffd34d;color:#16264a;text-align:center;font:700 12px/1.3 system-ui,sans-serif;padding:3px 8px">PREVIEW – NISMCAA Tutor is in testing. Payments run in TEST MODE only: no real money moves.</div>
+<div class="tb"><b>NISMCAA Tutor · Teaching Board</b><span class="pv">Preview – live on all devices</span>
 <button id="mode">🖤 Blackboard</button><span id="cols"></span>
 <select id="sz" aria-label="Pen size"><option value="2">Thin</option><option value="5" selected>Medium</option><option value="10">Thick</option><option value="22">Marker</option></select>
 <button id="pen" class="sel">✏️ Pen</button><button id="er">🧽 Eraser</button><button id="tx">🔤 Text</button><button id="un">↶ Undo</button><button id="cl">🗑 Clear</button><button id="png">💾 Save PNG</button><button id="fs">⛶ Full screen</button><a id="back" href="./" target="_top">← Back</a></div>
 <canvas id="cv"></canvas><div class="note" id="note"></div>
-<script>
+<script src="sync.js"></script><script>
 const q=new URLSearchParams(location.search),room=q.get('room')||'demo',cv=document.getElementById('cv'),x=cv.getContext('2d');
 let dark=false,col='#16264a',tool='pen',S=[],cur=null;
 const LC=['#16264a','#ff6b4a','#00897f','#7a4bd1','#e0a100','#d62828'],DC=['#ffffff','#ffdb67','#7dcabf','#f6a6c1','#9ad1ff','#ff9f7a'];
 const ch='BroadcastChannel' in window?new BroadcastChannel('nt-board-'+room):null;
-document.getElementById('note').innerHTML=`Room ${room.replace(/[<>&]/g,'')} · <b>Shared live in this preview only between tabs/windows on the same device and browser</b> (BroadcastChannel). Across two different devices, use Jitsi's screen share in Join lesson. Real cross-device sync needs a server (next stage).`;
+document.getElementById('note').innerHTML=`Room ${room.replace(/[<>&]/g,'')} · <b>Shared live with everyone in this lesson, on any device</b>. Not recorded. (Tip: you can also screen share in Join lesson.`;
 function cols(){const c=dark?DC:LC;if(!c.includes(col))col=c[0];document.getElementById('cols').innerHTML=c.map(v=>`<button class="sw ${v==col?'sel':''}" style="background:${v}" aria-label="Color ${v}" onclick="col='${v}';tool=tool=='er'?'pen':tool;cols();tb()"></button>`).join('')}
 function rs(){const r=cv.getBoundingClientRect();cv.width=r.width*devicePixelRatio;cv.height=r.height*devicePixelRatio;draw()}
 function draw(){x.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);x.fillStyle=dark?'#24352b':'#ffffff';x.fillRect(0,0,cv.width,cv.height);x.lineCap=x.lineJoin='round';
