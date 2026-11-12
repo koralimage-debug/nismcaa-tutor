@@ -1,4 +1,4 @@
-const K = 'nismcaa-tutor-v3';
+const K = 'nismcaa-tutor-v4';
 const ASSETS = [
   './',
   'manifest.webmanifest',
