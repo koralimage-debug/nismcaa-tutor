@@ -20,6 +20,7 @@ select,input{border:1px solid var(--line);border-radius:12px;padding:9px;min-hei
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.steps div{background:var(--cream);border-radius:16px;padding:12px;text-align:center;font-size:.88rem}.steps b{display:block;font-size:1.6rem}
 .badge{display:inline-block;background:var(--navy);color:var(--sun);font-size:.74rem;font-weight:800;border-radius:10px;padding:3px 9px}
 .nf{background:#182947;color:#b8c7df;text-align:center;padding:24px 16px;font-size:.88rem}.nf a{color:#ffdb67;display:inline-flex;min-height:44px;align-items:center;padding:0 4px}
+details{border-top:1px solid var(--line);padding:8px 0}details:first-of-type{border-top:0}summary{cursor:pointer;font-weight:700;min-height:44px;display:flex;align-items:center}
 @media(max-width:760px){.hero,.big{grid-template-columns:1fr}.f,.steps{grid-template-columns:1fr 1fr}.hero h1{font-size:1.5rem}.nh nav{margin-left:0}.nh .brand{padding:3px 8px 3px 4px}.nh .brand img{height:40px}}
 </style></head><body>
 <div class="prev" style="background:#ffd34d;color:#16264a;text-align:center;font:700 12px/1.3 system-ui,sans-serif;padding:3px 8px">Payments are in TEST MODE only: no real money moves. Use the test card 4242 4242 4242 4242.</div>
@@ -39,6 +40,13 @@ select,input{border:1px solid var(--line);border-radius:12px;padding:9px;min-hei
 
 <section class="panel"><h2>How to get listed</h2><div class="steps"><div><b>🧑‍🏫</b>Create your profile and set your own rate</div><div><b>🎓</b>Pass the subject test (70%) and send a teaching demo</div><div><b>🏅</b>Get your NISMCAA Certified badge</div><div><b>💵</b>Teach and keep 80%, paid in USD</div></div>
 <p style="margin-top:12px"><button class="go" onclick="location.href='./#join'">Apply to teach</button> <button onclick="location.href='./'">See NISMCAA Tutor</button></p></section>
+<section class="panel" id="payment"><h2>How payment works</h2>
+<p>The parent or learner pays at booking, and NISMCAA holds the payment. After the lesson, if no issue is reported within 1–2 days, the tutor is paid on the next weekly payout, minus the NISMCAA platform fee (20%). If the tutor does not show, the parent or learner is refunded.</p></section>
+<section class="panel" id="faq"><h2>FAQ</h2>
+<details><summary>How does payment work?</summary><p>The parent or learner pays at booking, and NISMCAA holds the payment. After the lesson, if no issue is reported within 1–2 days, the tutor is paid on the next weekly payout, minus the NISMCAA platform fee (20%). If the tutor does not show, the parent or learner is refunded.</p></details>
+<details><summary>When is the tutor paid?</summary><p>After the lesson, once 1–2 days have passed with no issue reported, the tutor's 80% share goes out on the next weekly payout. NISMCAA holds the payment until then and keeps a 20% platform fee. Tax the learner pays on top is set aside separately.</p></details>
+<details><summary>What if the tutor does not show?</summary><p>The parent or learner is refunded.</p></details>
+</section>
 </main>
 <footer class="nf">© NISMCAA · NISMCAA Tutor · part of NISMCAA and <a href="https://academy.nismcaa.com/">academy.nismcaa.com</a><br>Tutoring: <a href="mailto:tutor@nismcaa.com">tutor@nismcaa.com</a> · <a href="https://nismcaa.com/">← Back to NISMCAA</a><br>🔒 NISMCAA never records or stores lessons.</footer>
 <script>

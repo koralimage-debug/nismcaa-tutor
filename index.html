@@ -69,7 +69,9 @@ table{width:100%;border-collapse:collapse;font-size:.84rem}th,td{text-align:left
 <div class="grid" id="list"></div>
 <div class="safe"><b>Child safety:</b> learners under 18 book through a parent or guardian account. The parent or guardian books, pays, receives all messages and can join any lesson. In-person lessons for under-18s need a parent or guardian present.<br><b>🔒 Privacy:</b> NISMCAA never records or stores lessons.</div>
 <div class="panel"><h2>How NISMCAA Tutor works</h2><h3>For learners</h3><div class="steps"><div class="step"><b>🔎</b>Browse and filter by subject, mode, price, language, time zone, rating</div><div class="step"><b>⏱️</b>Pick 30, 45, 60, 90 or 120 minutes and a time slot</div><div class="step"><b>💳</b>Pay NISMCAA the lesson price plus tax on top</div><div class="step"><b>⭐</b>Learn in person or on NISMCAA video, then review</div></div>
-<h3 style="margin-top:12px">For tutors</h3><div class="steps"><div class="step"><b>🧑‍🏫</b>Create your profile, mode, city/radius and durations</div><div class="step"><b>🎓</b>Pass the subject test (70%) and send a teaching demo for review</div><div class="step"><b>🏅</b>Get your NISMCAA certificate and badge, then you are listed</div><div class="step"><b>💰</b>Keep 80% of your lesson price; NISMCAA keeps 20%. Tax is paid by the learner on top</div></div></div>
+<h3 style="margin-top:12px">For tutors</h3><div class="steps"><div class="step"><b>🧑‍🏫</b>Create your profile, mode, city/radius and durations</div><div class="step"><b>🎓</b>Pass the subject test (70%) and send a teaching demo for review</div><div class="step"><b>🏅</b>Get your NISMCAA certificate and badge, then you are listed</div><div class="step"><b>💰</b>Keep 80% of your lesson price; NISMCAA keeps 20%. Tax is paid by the learner on top</div></div>
+<h3 style="margin-top:16px">How payment works</h3>
+<p>The parent or learner pays at booking, and NISMCAA holds the payment. After the lesson, if no issue is reported within 1–2 days, the tutor is paid on the next weekly payout, minus the NISMCAA platform fee (20%). If the tutor does not show, the parent or learner is refunded.</p></div>
 </section>
 
 <section class="scr" id="s-bookings" hidden><h2>My bookings <span class="muted">(example)</span></h2><div id="bk"></div></section>
@@ -81,7 +83,7 @@ table{width:100%;border-collapse:collapse;font-size:.84rem}th,td{text-align:left
 
 <section class="scr" id="s-profile" hidden>
 <div class="chips" id="ptabs"><button data-p="join" class="sel">Become a tutor</button><button onclick="location.href='teach.html'">💰 Earnings calculator</button></div>
-<div id="p-join"><div class="panel"><h2>Step 1: Your tutor profile</h2><form id="jf">
+<div id="p-join"><div class="panel"><h2>How payment works</h2><p>The parent or learner pays at booking, and NISMCAA holds the payment. After the lesson, if no issue is reported within 1–2 days, the tutor is paid on the next weekly payout, minus the NISMCAA platform fee (20%). If the tutor does not show, the parent or learner is refunded. More detail is on the <a href="teach.html#payment">Teach page FAQ</a>.</p></div><div class="panel"><h2>Step 1: Your tutor profile</h2><form id="jf">
 <div class="row"><label>Full name<input required name="n"></label><label>Profile photo<input type="file" accept="image/*"></label></div>
 <div class="row"><label>Subjects<input required id="jsub" placeholder="e.g. Piano, Math"></label><label>Levels<select multiple size="3"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></label></div>
 <div class="row"><label>Languages<input placeholder="e.g. English, Spanish"></label><label>State & time zone<input placeholder="e.g. Georgia · ET (UTC-5)"></label></div>
@@ -189,4 +191,4 @@ $('mf').onsubmit=e=>{e.preventDefault();const v=$('mi').value.trim();if(!v)retur
 setTimeout(()=>{const s=$('splash');if(!s)return;s.style.opacity=0;setTimeout(()=>s.remove(),500)},1100);
 if(location.hash=='#join')tab('profile');
 if('serviceWorker' in navigator&&location.protocol=='https:')navigator.serviceWorker.register('sw.js');
-</script><script src="geo.js?v=4"></script><script src="live.js?v=5"></script></body></html>
+</script><script src="geo.js?v=4"></script><script src="live.js?v=6"></script></body></html>
