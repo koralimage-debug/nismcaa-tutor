@@ -94,7 +94,7 @@ table{width:100%;border-collapse:collapse;font-size:.84rem}th,td{text-align:left
 <div class="row"><label>Hourly rate<input id="jr" type="number" min="1" value="25"></label><select id="jc" hidden aria-label="Currency (USD only)"></select><span class="muted">Rates are set in US dollars (USD) only.</span></div>
 <div class="ok" id="jearn"></div>
 <label>Short bio<textarea rows="3"></textarea></label>
-<p><label style="font-weight:400"><input type="checkbox" required> I agree to NISMCAA Tutor tutor rules, ID check and the child-safety policy.</label></p>
+<p class="muted">Draft v1.0, lawyer review pending.</p><p><label style="font-weight:400"><input type="checkbox" required> I have read and agree to the <a href="legal/tutor-agreement.html" target="_blank" rel="noopener">NISMCAA Tutor Agreement (v1.0)</a> and the <a href="legal/standards.html" target="_blank" rel="noopener">Standards and Procedures Handbook (v1.0)</a>. I confirm that I am 18 or older, that my application is true, and that I consent to identity and background checks. I will keep all lessons, messages, and payments on NISMCAA Tutor, and I will follow every child safeguarding rule.</label></p>
 <button class="go">Continue to certification</button></form></div>
 <div class="panel" id="jok" hidden><h2>Step 2: Get NISMCAA Certified</h2><p class="muted">Pass mark <b>70%</b> on the subject test, plus a teaching demo video approved by an admin. Only certified tutors are listed.</p>
 <form id="qf"><div><b>Sample subject test (Music Theory example)</b>
@@ -113,7 +113,7 @@ table{width:100%;border-collapse:collapse;font-size:.84rem}th,td{text-align:left
 <div class="bookbar" id="bookbar"><span><b>Certified tutors</b><br><small id="bbfrom"></small></span><button class="go" onclick="$('list').scrollIntoView({behavior:'smooth'})">Book a tutor</button></div>
 <p class="muted" style="text-align:center;font-weight:700;margin:8px 0">💵 All prices are in US dollars (USD).</p>
 <dialog id="dlg"><div id="dbody"></div></dialog>
-<footer class="nf">© NISMCAA · NISMCAA Tutor · <a href="https://tutor.nismcaa.com/">tutor.nismcaa.com</a> (part of NISMCAA)<br>Tutoring: <a href="mailto:tutor@nismcaa.com">tutor@nismcaa.com</a> · General: <a href="mailto:info@nismcaa.com">info@nismcaa.com</a> · <a href="https://nismcaa.com/">← Back to NISMCAA</a><br>🔒 NISMCAA never records or stores lessons. · <a href="teach.html">Teach on NISMCAA Tutor</a><br>Founder: Olushola John Adebowale</footer><script>
+<footer class="nf">© NISMCAA · NISMCAA Tutor · <a href="https://tutor.nismcaa.com/">tutor.nismcaa.com</a> (part of NISMCAA)<br>Tutoring: <a href="mailto:tutor@nismcaa.com">tutor@nismcaa.com</a> · General: <a href="mailto:info@nismcaa.com">info@nismcaa.com</a> · <a href="https://nismcaa.com/">← Back to NISMCAA</a><br>🔒 NISMCAA never records or stores lessons. · <a href="teach.html">Teach on NISMCAA Tutor</a><br><a href="legal/tutor-agreement.html">Tutor Agreement</a> · <a href="legal/client-agreement.html">Client Agreement</a> · <a href="legal/standards.html">Standards and Procedures</a><br>Founder: Olushola John Adebowale</footer><script>
 const FX={USD:1};
 const TAX={"Georgia":4,"New York":4,"California":7.25,"Texas":6.25,"Illinois":6.25,"Florida":6,"North Carolina":4.75,"Washington":6.5};
 const C=["#ffd34d","#ff6b4a","#7a4bd1","#00897f","#7dcabf","#f6a6c1"],SK=["#8a5a3c","#f1c7a0","#c68a5e","#5b3a29","#e8b896","#a8704b"],DUR=[30,45,60,90,120];
@@ -191,4 +191,4 @@ $('mf').onsubmit=e=>{e.preventDefault();const v=$('mi').value.trim();if(!v)retur
 setTimeout(()=>{const s=$('splash');if(!s)return;s.style.opacity=0;setTimeout(()=>s.remove(),500)},1100);
 if(location.hash=='#join')tab('profile');
 if('serviceWorker' in navigator&&location.protocol=='https:')navigator.serviceWorker.register('sw.js');
-</script><script src="geo.js?v=4"></script><script src="live.js?v=6"></script></body></html>
+</script><script src="geo.js?v=4"></script><script src="live.js?v=7"></script></body></html>
