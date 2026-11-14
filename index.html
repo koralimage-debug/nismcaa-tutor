@@ -20,6 +20,12 @@ input[type=checkbox],input[type=radio]{width:auto;min-height:0}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
 .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:6px;position:relative}
 .ex{position:absolute;top:10px;right:10px;background:#ffe1d3;color:#a8361b;font-size:.66rem;font-weight:800;border-radius:10px;padding:2px 8px;text-transform:uppercase}
+.sample-badge{position:absolute;top:10px;right:10px;background:#ffe1d3;color:#a8361b;font-size:.7rem;font-weight:800;border-radius:10px;padding:3px 8px}
+.sample-soon{display:inline-block;font-size:.78rem;font-weight:700;color:#a8361b;background:#fff4ec;border:1px solid #ffd0c0;border-radius:12px;padding:8px 10px;max-width:16rem;line-height:1.3;text-align:right}
+.sample-actions{display:flex;flex-direction:column;align-items:flex-end;gap:4px;text-align:right;max-width:18rem}.sample-sked{font-size:.74rem;line-height:1.3;max-width:18rem}
+.sked{display:inline-block;border-radius:12px;padding:6px 10px;margin:3px 3px 0 0;font-size:.78rem;font-weight:700}
+.sked.booked,.sked.full{background:#ece2da;color:#5a6478;text-decoration:line-through}
+.sked.open{background:#e0f4f1;color:#006b63}
 .who{display:flex;gap:10px;align-items:center}.av{width:60px;height:60px;border-radius:50%;flex-shrink:0}
 .pill{display:inline-block;border-radius:20px;background:#e0f4f1;padding:2px 9px;font-size:.74rem;color:#006b63;font-weight:700;margin:2px 2px 0 0}.pm{background:#efe6ff;color:#5a2fb0}.pp{background:#ffe1d3;color:#a8361b}
 .badge{display:inline-block;background:var(--navy);color:var(--sun);font-size:.7rem;font-weight:800;border-radius:10px;padding:2px 8px}
@@ -183,4 +189,4 @@ $('mf').onsubmit=e=>{e.preventDefault();const v=$('mi').value.trim();if(!v)retur
 setTimeout(()=>{const s=$('splash');if(!s)return;s.style.opacity=0;setTimeout(()=>s.remove(),500)},1100);
 if(location.hash=='#join')tab('profile');
 if('serviceWorker' in navigator&&location.protocol=='https:')navigator.serviceWorker.register('sw.js');
-</script><script src="geo.js?v=4"></script><script src="live.js?v=4"></script></body></html>
+</script><script src="geo.js?v=4"></script><script src="live.js?v=5"></script></body></html>
