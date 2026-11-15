@@ -22,16 +22,16 @@ input[type=checkbox],input[type=radio]{width:auto;min-height:0}
 .ex{position:absolute;top:10px;right:10px;background:#ffe1d3;color:#a8361b;font-size:.66rem;font-weight:800;border-radius:10px;padding:2px 8px;text-transform:uppercase}
 .sample-badge{position:absolute;top:10px;right:10px;background:#ffe1d3;color:#a8361b;font-size:.7rem;font-weight:800;border-radius:10px;padding:3px 8px}
 .sample-soon{display:inline-block;font-size:.78rem;font-weight:700;color:#a8361b;background:#fff4ec;border:1px solid #ffd0c0;border-radius:12px;padding:8px 10px;max-width:16rem;line-height:1.3;text-align:right}
-.sample-actions{display:flex;flex-direction:column;align-items:flex-end;gap:4px;text-align:right;max-width:18rem}.sample-sked{font-size:.74rem;line-height:1.3;max-width:18rem}
+.sample-actions{display:flex;flex-direction:column;align-items:flex-end;gap:4px;text-align:right;max-width:18rem}.sample-nobook{opacity:.75;cursor:not-allowed}.sample-sked{font-size:.74rem;line-height:1.3;max-width:18rem}
 .sked{display:inline-block;border-radius:12px;padding:6px 10px;margin:3px 3px 0 0;font-size:.78rem;font-weight:700}
 .sked.booked,.sked.full{background:#ece2da;color:#5a6478;text-decoration:line-through}
 .sked.open{background:#e0f4f1;color:#006b63}
 .who{display:flex;gap:10px;align-items:center}.av{width:60px;height:60px;border-radius:50%;flex-shrink:0}
 .pill{display:inline-block;border-radius:20px;background:#e0f4f1;padding:2px 9px;font-size:.74rem;color:#006b63;font-weight:700;margin:2px 2px 0 0}.pm{background:#efe6ff;color:#5a2fb0}.pp{background:#ffe1d3;color:#a8361b}
 .badge{display:inline-block;background:var(--navy);color:var(--sun);font-size:.7rem;font-weight:800;border-radius:10px;padding:2px 8px}
-.muted{color:var(--muted);font-size:.86rem}.price{font-family:Manrope;font-weight:800;font-size:1.1rem}.stars{background:linear-gradient(90deg,#e0a100 var(--p),#d6d0c8 var(--p));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:1px}
+.muted{color:var(--muted);font-size:.86rem}.price{font-family:Manrope;font-weight:800;font-size:1.1rem;white-space:nowrap}.stars{background:linear-gradient(90deg,#e0a100 var(--p),#d6d0c8 var(--p));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:1px}
 .nr{display:inline-flex;align-items:center;gap:4px;background:#16264a;color:#fff;font-size:.72rem;font-weight:800;border-radius:10px;padding:2px 8px}.tagl{font-family:Manrope;font-weight:800;color:var(--go);font-size:1.05rem;margin:4px 0 8px}.incl{font-size:.74rem;color:var(--muted)}
-.bookbar{display:none}@media(max-width:760px){.bookbar{display:flex;position:fixed;left:0;right:0;bottom:62px;z-index:9;background:var(--navy);color:#fff;align-items:center;justify-content:space-between;gap:8px;padding:8px 14px;box-shadow:0 -4px 14px #0003}.bookbar .go{min-height:44px}.app{padding-bottom:150px}}
+.bookbar{display:none}@media(max-width:760px){.bookbar{display:flex;position:fixed;left:0;right:0;bottom:62px;z-index:9;background:var(--navy);color:#fff;align-items:center;justify-content:space-between;gap:8px;padding:8px 14px;box-shadow:0 -4px 14px #0003;padding-bottom:calc(8px + env(safe-area-inset-bottom,0px))}.bookbar .go{min-height:44px}.sample-nobook{opacity:.75;cursor:not-allowed}.app{padding-bottom:calc(62px + 88px + 28px + env(safe-area-inset-bottom,0px))}.safe{margin-bottom:12px}}
 .safe{background:#efe6ff;border-left:6px solid var(--plum);border-radius:14px;padding:12px 14px;margin:14px 0}
 .cfg{background:#fff6d6;border:2px dashed #e0b400;border-radius:14px;padding:10px 14px}
 .tabbar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);display:flex;justify-content:center;z-index:10;padding-bottom:env(safe-area-inset-bottom)}
@@ -111,7 +111,7 @@ table{width:100%;border-collapse:collapse;font-size:.84rem}th,td{text-align:left
 <button data-t="messages"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 5h16v11H9l-5 4z"/></svg>Messages</button>
 <button data-t="profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg>Profile</button></nav>
 <div class="bookbar" id="bookbar"><span><b>Certified tutors</b><br><small id="bbfrom"></small></span><button class="go" onclick="$('list').scrollIntoView({behavior:'smooth'})">Book a tutor</button></div>
-<p class="muted" style="text-align:center;font-weight:700;margin:8px 0">💵 Prices are shown in the currency listed on each profile.</p>
+<p class="muted" style="text-align:center;font-weight:700;margin:8px 0">💵 All prices are in US dollars (USD).</p>
 <dialog id="dlg"><div id="dbody"></div></dialog>
 <footer class="nf">© NISMCAA · NISMCAA Tutor · <a href="https://tutor.nismcaa.com/">tutor.nismcaa.com</a> (part of NISMCAA)<br>Tutoring: <a href="mailto:tutor@nismcaa.com">tutor@nismcaa.com</a> · General: <a href="mailto:info@nismcaa.com">info@nismcaa.com</a> · <a href="https://nismcaa.com/">← Back to NISMCAA</a><br>🛡 Lessons with under-18 students may be recorded by NISMCAA for safety, kept for 90 days, then deleted. Tutors never make their own recordings. · <a href="teach.html">Teach on NISMCAA Tutor</a><br><a href="legal/tutor-agreement.html">Tutor Agreement</a> · <a href="legal/client-agreement.html">Client Agreement</a> · <a href="legal/standards.html">Standards and Procedures</a><br>Founder: Olushola John Adebowale</footer><script>
 const FX={USD:1};
@@ -191,4 +191,4 @@ $('mf').onsubmit=e=>{e.preventDefault();const v=$('mi').value.trim();if(!v)retur
 setTimeout(()=>{const s=$('splash');if(!s)return;s.style.opacity=0;setTimeout(()=>s.remove(),500)},1100);
 if(location.hash=='#join')tab('profile');
 if('serviceWorker' in navigator&&location.protocol=='https:')navigator.serviceWorker.register('sw.js');
-</script><script src="geo.js?v=4"></script><script src="live.js?v=10"></script></body></html>
+</script><script src="geo.js?v=4"></script><script src="live.js?v=11"></script></body></html>
