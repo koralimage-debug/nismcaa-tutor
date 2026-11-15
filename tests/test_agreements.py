@@ -71,6 +71,7 @@ class AgreementPageTests(unittest.TestCase):
         self.assertNotIn("GPT", js)
         # Sample tutors stay unbookable, without visible "sample" or "demo" wording
         self.assertIn("Not available for now", js)
+        self.assertIn('aria-disabled="true"', js)
         self.assertIn("t&&t.sample", js)
         self.assertNotIn("Sample profile", js)
         self.assertNotIn("Sample – not bookable", js)
