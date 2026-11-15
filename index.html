@@ -111,7 +111,7 @@ table{width:100%;border-collapse:collapse;font-size:.84rem}th,td{text-align:left
 <button data-t="messages"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 5h16v11H9l-5 4z"/></svg>Messages</button>
 <button data-t="profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg>Profile</button></nav>
 <div class="bookbar" id="bookbar"><span><b>Certified tutors</b><br><small id="bbfrom"></small></span><button class="go" onclick="$('list').scrollIntoView({behavior:'smooth'})">Book a tutor</button></div>
-<p class="muted" style="text-align:center;font-weight:700;margin:8px 0">💵 All prices are in US dollars (USD).</p>
+<p class="muted" style="text-align:center;font-weight:700;margin:8px 0">💵 Prices are shown in the currency listed on each profile.</p>
 <dialog id="dlg"><div id="dbody"></div></dialog>
 <footer class="nf">© NISMCAA · NISMCAA Tutor · <a href="https://tutor.nismcaa.com/">tutor.nismcaa.com</a> (part of NISMCAA)<br>Tutoring: <a href="mailto:tutor@nismcaa.com">tutor@nismcaa.com</a> · General: <a href="mailto:info@nismcaa.com">info@nismcaa.com</a> · <a href="https://nismcaa.com/">← Back to NISMCAA</a><br>🛡 Lessons with under-18 students may be recorded by NISMCAA for safety, kept for 90 days, then deleted. Tutors never make their own recordings. · <a href="teach.html">Teach on NISMCAA Tutor</a><br><a href="legal/tutor-agreement.html">Tutor Agreement</a> · <a href="legal/client-agreement.html">Client Agreement</a> · <a href="legal/standards.html">Standards and Procedures</a><br>Founder: Olushola John Adebowale</footer><script>
 const FX={USD:1};
@@ -191,4 +191,4 @@ $('mf').onsubmit=e=>{e.preventDefault();const v=$('mi').value.trim();if(!v)retur
 setTimeout(()=>{const s=$('splash');if(!s)return;s.style.opacity=0;setTimeout(()=>s.remove(),500)},1100);
 if(location.hash=='#join')tab('profile');
 if('serviceWorker' in navigator&&location.protocol=='https:')navigator.serviceWorker.register('sw.js');
-</script><script src="geo.js?v=4"></script><script src="live.js?v=9"></script></body></html>
+</script><script src="geo.js?v=4"></script><script src="live.js?v=10"></script></body></html>
