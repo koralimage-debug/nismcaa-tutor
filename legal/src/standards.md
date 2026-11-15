@@ -4,13 +4,13 @@
 Version 1.0 · Effective date: January 1, 2027 (placeholder, to be confirmed at launch)  
 Contact: info@nismcaa.com
 
-> **Before launch:** This handbook sets out how NISMCAA Tutor intends to operate. It is not legal advice. A qualified lawyer should review it, together with the Tutor Agreement and the Client Agreement, before launch. That review should cover consumer, child-protection, privacy, payments, and tax rules in each country we serve (the United States, Nigeria, the United Kingdom, Canada, and Ghana).
+> **Before launch:** This handbook sets out how NISMCAA Tutor intends to operate. It is not legal advice. A qualified lawyer should review it, together with the Tutor Agreement and the Client Agreement, before launch. That review should cover consumer, child-protection, privacy, payments, and tax rules in each country we serve (the United States, Nigeria, the United Kingdom, Canada, the United Arab Emirates, and Australia).
 
 ---
 
 ## Welcome
 
-NISMCAA Tutor is the online music tutoring marketplace of NISMCAA, a US music education organization founded by John Adebowale and based in Atlanta, Georgia. We connect students of every age with music tutors we have vetted and approved. Our students live mostly in the United States, and also in Nigeria, the United Kingdom, Canada, and Ghana.
+NISMCAA Tutor is the online music tutoring marketplace of NISMCAA, a US music education organization founded by John Adebowale and based in Atlanta, Georgia. We connect students of every age with music tutors we have vetted and approved. Our students live mostly in the United States, and also in Nigeria, the United Kingdom, Canada, the United Arab Emirates, and Australia.
 
 Many of our students are children, so everything in this handbook starts from one rule: **children's safety comes before everything else, including convenience, speed, and revenue.**
 
@@ -46,7 +46,7 @@ Every tutor accepts the **Tutor Agreement** when signing up. Every parent or adu
 To apply, you must:
 
 - be at least 18 years old;
-- live in a country where we can complete ID and background checks and pay you (at launch: the US, Nigeria, the UK, Canada, and Ghana);
+- live in a country where we can complete ID and background checks and pay you (at launch: the US, Nigeria, the UK, Canada, the UAE, and Australia);
 - have a reliable internet connection, a working camera and microphone, and a quiet, private, professional teaching space;
 - be able to teach in clear English (more languages may be added later); and
 - show real skill and teaching experience in at least one instrument, voice, or music subject.
@@ -80,7 +80,8 @@ Each step must be completed before the next one starts. No one teaches until eve
   - **United Kingdom:** an enhanced DBS check with the children's barred list where it is available for this role, otherwise a basic DBS check. Tutors may use the DBS Update Service.
   - **Canada:** a police information check that includes a vulnerable sector check.
   - **Nigeria:** a Police Character Certificate from the Nigeria Police Force, plus identity verification (for example, NIN).
-  - **Ghana:** a Police Clearance Certificate from the Ghana Police Service CID, plus identity verification (for example, Ghana Card).
+  - **United Arab Emirates:** a police clearance or good-conduct certificate from the relevant UAE authority.
+  - **Australia:** a Working with Children Check issued by the state or territory where you live, plus a national police check.
   - **Tutors who lived in another country within the last 5 years** may be asked for a check from that country too.
 - **What disqualifies a tutor:** any offense against a child, any sexual offense, being on a sex offender registry or children's barred list, and any violent offense. We also look at fraud and serious dishonesty offenses, case by case, considering how serious it was and how long ago. Traffic offenses are not considered.
 - **Renewal:** checks are renewed **every 12 months**. You have 30 days to complete a renewal. If a check lapses, your profile is hidden from search and no new bookings are allowed. Existing lessons with minors are paused until the check clears.
@@ -284,7 +285,7 @@ In a small team, one person may hold more than one role. However, **no one may d
 
 ## C6. Safeguarding escalation procedure
 
-1. **Immediate danger:** tell the reporter to call local emergency services (US and Canada 911, UK 999, Nigeria 112, Ghana 112). The Safeguarding Lead also contacts the authorities where appropriate.
+1. **Immediate danger:** tell the reporter to call local emergency services (US and Canada 911, UK 999, UAE 999, Nigeria 112, Australia 000). The Safeguarding Lead also contacts the authorities where appropriate.
 2. **Suspend first, investigate second:** if a tutor is the subject of a credible concern involving a minor, suspend the tutor's account and hide their profile **at once**, pending review. Pause their payouts. Cancel and fully refund their upcoming lessons with minors.
 3. **Preserve evidence:** lock the relevant recordings, messages, and logs so they are not deleted on schedule.
 4. **Record** the facts as reported, using the reporter's own words where possible. Do not interview the child. Do not promise the reporter confidentiality you cannot keep.
@@ -402,7 +403,7 @@ Disputes over card charges should come to us first. Opening a chargeback with yo
 ### D5.6 How to report a concern
 Anyone (a parent, student, tutor, or staff member) can report.
 
-1. **If a child is in immediate danger,** call local emergency services first: **US and Canada 911 · UK 999 · Nigeria 112 · Ghana 112.**
+1. **If a child is in immediate danger,** call local emergency services first: **US and Canada 911 · UK 999 · UAE 999 · Nigeria 112 · Australia 000.**
 2. **Use "Report a safety concern"** in the Meeting Room or on any lesson or profile page, or email **info@nismcaa.com** with **"SAFETY"** in the subject line.
 3. **Say what happened,** when it happened, who was involved, and anything you saw or heard. Do not wait for proof.
 4. **What happens next:** the Safeguarding Lead responds within 2 hours for urgent reports (see C2). The tutor may be suspended while we look into it. We keep you informed as far as we can without risking the child or the investigation.
@@ -458,7 +459,7 @@ Anyone (a parent, student, tutor, or staff member) can report.
 - **We never sell personal data.** We share it only with service providers who help run the platform (payments, identity checks, background checks, video, email), or when the law requires it.
 - **How long we keep data:** recordings for 90 days (D5.4). Messages and lesson records for the life of the account, plus a period required for tax and legal purposes (to be confirmed by a lawyer). Safeguarding records for as long as the law requires.
 - **Your rights:** you may ask to see, correct, download, or delete your data by emailing info@nismcaa.com. We reply within 30 days. Some records must be kept for legal, tax, or safety reasons.
-- **Laws:** NISMCAA intends to follow the privacy and children's privacy laws that apply in each country we serve. In the US these include COPPA for children under 13; others include the UK GDPR and Age Appropriate Design Code, Canada's PIPEDA, Nigeria's Data Protection Act, and Ghana's Data Protection Act. A full Privacy Policy, reviewed by a lawyer, will be published separately.
+- **Laws:** NISMCAA intends to follow the privacy and children's privacy laws that apply in each country we serve. In the US these include COPPA for children under 13; others include the UK GDPR and Age Appropriate Design Code, Canada's PIPEDA, Nigeria's Data Protection Act, the UAE's Personal Data Protection Law, and Australia's Privacy Act 1988. A full Privacy Policy, reviewed by a lawyer, will be published separately.
 - **Security:** two-factor sign-in is available (and required for tutors and staff), data is encrypted in transit and at rest, and staff access is limited by role.
 
 ## D9. Accessibility
@@ -524,7 +525,7 @@ We may update this handbook. We will give at least **14 days' notice** by email 
 - Lessons with minors are recorded, kept for 90 days, then deleted.
 - No personal recordings without consent.
 
-**Report a concern:** emergency → 911 (US and Canada) · 999 (UK) · 112 (Nigeria and Ghana). Then use "Report a safety concern" or email info@nismcaa.com with "SAFETY" in the subject. Urgent reports get a reply within 2 hours.
+**Report a concern:** emergency → 911 (US and Canada) · 999 (UK and the UAE) · 112 (Nigeria) · 000 (Australia). Then use "Report a safety concern" or email info@nismcaa.com with "SAFETY" in the subject. Urgent reports get a reply within 2 hours.
 
 **Your data:** we never sell it. Ask to see or delete it at info@nismcaa.com.
 
