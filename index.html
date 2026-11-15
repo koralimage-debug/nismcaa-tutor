@@ -20,9 +20,7 @@ input[type=checkbox],input[type=radio]{width:auto;min-height:0}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
 .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:6px;position:relative}
 .ex{position:absolute;top:10px;right:10px;background:#ffe1d3;color:#a8361b;font-size:.66rem;font-weight:800;border-radius:10px;padding:2px 8px;text-transform:uppercase}
-.sample-badge{position:absolute;top:10px;right:10px;background:#ffe1d3;color:#a8361b;font-size:.7rem;font-weight:800;border-radius:10px;padding:3px 8px}
-.sample-soon{display:inline-block;font-size:.78rem;font-weight:700;color:#a8361b;background:#fff4ec;border:1px solid #ffd0c0;border-radius:12px;padding:8px 10px;max-width:16rem;line-height:1.3;text-align:right}
-.sample-actions{display:flex;flex-direction:column;align-items:flex-end;gap:4px;text-align:right;max-width:18rem}button.sample-nobook:disabled,.sample-nobook{opacity:1;cursor:not-allowed;color:#2f3b4e;background:#eef1f4;border-color:#b8c0cc}.sample-sked{font-size:.74rem;line-height:1.3;max-width:18rem}
+.sample-actions{display:flex;flex-direction:column;align-items:flex-end;gap:4px;text-align:right;max-width:18rem}button.unavail:disabled,.unavail{opacity:1;cursor:not-allowed;pointer-events:none;color:var(--navy);background:#fff;border-color:var(--line);font-weight:700;text-align:center;line-height:1.25;max-width:11.5rem}.list-foot{text-align:center;font-size:.84rem;font-weight:600;color:#3d4758;margin:10px 0 22px}
 .sked{display:inline-block;border-radius:12px;padding:6px 10px;margin:3px 3px 0 0;font-size:.78rem;font-weight:700}
 .sked.booked,.sked.full{background:#ece2da;color:#5a6478;text-decoration:line-through}
 .sked.open{background:#e0f4f1;color:#006b63}
@@ -31,7 +29,7 @@ input[type=checkbox],input[type=radio]{width:auto;min-height:0}
 .badge{display:inline-block;background:var(--navy);color:var(--sun);font-size:.7rem;font-weight:800;border-radius:10px;padding:2px 8px}
 .muted{color:var(--muted);font-size:.86rem}.price{font-family:Manrope;font-weight:800;font-size:1.1rem;white-space:nowrap}.stars{background:linear-gradient(90deg,#e0a100 var(--p),#d6d0c8 var(--p));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:1px}
 .nr{display:inline-flex;align-items:center;gap:4px;background:#16264a;color:#fff;font-size:.72rem;font-weight:800;border-radius:10px;padding:2px 8px}.tagl{font-family:Manrope;font-weight:800;color:var(--go);font-size:1.05rem;margin:4px 0 8px}.incl{font-size:.74rem;color:var(--muted)}
-.bookbar{display:none}@media(max-width:760px){.bookbar{display:flex;position:fixed;left:0;right:0;bottom:62px;z-index:9;background:var(--navy);color:#fff;align-items:center;justify-content:space-between;gap:8px;padding:8px 14px;box-shadow:0 -4px 14px #0003;padding-bottom:calc(8px + env(safe-area-inset-bottom,0px))} .bookbar .go{min-height:44px}.app{padding-bottom:calc(62px + 88px + 28px + env(safe-area-inset-bottom,0px))}.safe{margin-bottom:12px}}
+.bookbar{display:none}@media(max-width:760px){.bookbar:not([hidden]){display:flex;position:fixed;left:0;right:0;bottom:62px;z-index:9;background:var(--navy);color:#fff;align-items:center;justify-content:space-between;gap:8px;padding:8px 14px;box-shadow:0 -4px 14px #0003;padding-bottom:calc(8px + env(safe-area-inset-bottom,0px))}.bookbar .go{min-height:44px}.app.has-bookbar{padding-bottom:calc(62px + 88px + 28px + env(safe-area-inset-bottom,0px))}.app.has-bookbar .safe{margin-bottom:12px}}
 .safe{background:#efe6ff;border-left:6px solid var(--plum);border-radius:14px;padding:12px 14px;margin:14px 0}
 .cfg{background:#fff6d6;border:2px dashed #e0b400;border-radius:14px;padding:10px 14px}
 .tabbar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);display:flex;justify-content:center;z-index:10;padding-bottom:env(safe-area-inset-bottom)}
@@ -72,6 +70,7 @@ table{width:100%;border-collapse:collapse;font-size:.84rem}th,td{text-align:left
 <h3 style="margin-top:12px">For tutors</h3><div class="steps"><div class="step"><b>🧑‍🏫</b>Create your profile, mode, city/radius and durations</div><div class="step"><b>🎓</b>Pass the subject test (70%) and send a teaching demo for review</div><div class="step"><b>🏅</b>Get your NISMCAA certificate and badge, then you are listed</div><div class="step"><b>💰</b>Keep 80% of your lesson price; NISMCAA keeps 20%. Tax is paid by the learner on top</div></div>
 <h3 style="margin-top:16px">How payment works</h3>
 <p>The parent or learner pays at booking, and NISMCAA holds the payment. After the lesson, if no issue is reported within 1–2 days, the tutor is paid on the next weekly payout, minus the NISMCAA platform fee (20%). If the tutor does not show, the parent or learner is refunded.</p></div>
+<p class="list-foot" id="list-foot" hidden>Example profiles shown while tutors join.</p>
 </section>
 
 <section class="scr" id="s-bookings" hidden><h2>My bookings <span class="muted">(example)</span></h2><div id="bk"></div></section>
@@ -110,7 +109,7 @@ table{width:100%;border-collapse:collapse;font-size:.84rem}th,td{text-align:left
 <button data-t="bookings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Bookings</button>
 <button data-t="messages"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 5h16v11H9l-5 4z"/></svg>Messages</button>
 <button data-t="profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg>Profile</button></nav>
-<div class="bookbar" id="bookbar"><span><b>Certified tutors</b><br><small id="bbfrom"></small></span><button class="go" onclick="$('list').scrollIntoView({behavior:'smooth'})">Book a tutor</button></div>
+<div class="bookbar" id="bookbar" hidden><span><b>Certified tutors</b><br><small id="bbfrom"></small></span><button class="go" onclick="$('list').scrollIntoView({behavior:'smooth'})">Book a tutor</button></div>
 <p class="muted" style="text-align:center;font-weight:700;margin:8px 0">💵 All prices are in US dollars (USD).</p>
 <dialog id="dlg"><div id="dbody"></div></dialog>
 <footer class="nf">© NISMCAA · NISMCAA Tutor · <a href="https://tutor.nismcaa.com/">tutor.nismcaa.com</a> (part of NISMCAA)<br>Tutoring: <a href="mailto:tutor@nismcaa.com">tutor@nismcaa.com</a> · General: <a href="mailto:info@nismcaa.com">info@nismcaa.com</a> · <a href="https://nismcaa.com/">← Back to NISMCAA</a><br>🛡 Lessons with under-18 students may be recorded by NISMCAA for safety, kept for 90 days, then deleted. Tutors never make their own recordings. · <a href="teach.html">Teach on NISMCAA Tutor</a><br><a href="legal/tutor-agreement.html">Tutor Agreement</a> · <a href="legal/client-agreement.html">Client Agreement</a> · <a href="legal/standards.html">Standards and Procedures</a><br>Founder: Olushola John Adebowale</footer><script>
@@ -140,9 +139,9 @@ const modeTxt=t=>(t.m!='Virtual'?`<span class="pill pp">📍 In person · ${t.ci
 function fill(id,a){[...new Set(a)].sort().forEach(v=>$(id).add(new Option(v,v)))}fill('fSub',T.flatMap(t=>t.s));fill('fLang',T.flatMap(t=>t.lg));
 let MODE='',SUBJ=[];
 function render(){const g=id=>$(id).value;const L=T.map((t,i)=>[t,i]).filter(([t])=>t.cert&&(!g('fSub')||t.s.includes(g('fSub')))&&(!SUBJ.length||t.s.some(x=>SUBJ.includes(x)))&&usd(t)<=+g('fPrice')&&(!g('fLang')||t.lg.includes(g('fLang')))&&(!g('fTz')||t.tz==g('fTz')||t.z.startsWith(g('fTz')+' '))&&t.rt>=+g('fRate')&&(!g('fDur')||t.d.includes(+g('fDur')))&&(!MODE||t.m==MODE||(MODE!='Both'&&t.m=='Both')));
-$('list').innerHTML=L.length?L.map(([t,i])=>`<article class="card"><span class="ex">Example profile</span><div class="who">${av(i)}<div><h3>${t.n}</h3><div class="muted">${t.c} · ${t.z}</div><span class="badge">✔ NISMCAA Certified</span> <span class="nr">🛡 Under-18 lessons safety-recorded</span><br>${st(t.rt)} ${t.rt.toFixed(1)} (${t.rv})</div></div>
-<div>${t.s.map(x=>`<span class="pill">${x}</span>`).join('')}</div><div>${modeTxt(t)}</div><div class="muted">${t.l} · Speaks ${t.lg.join(', ')} · Offers ${t.d.join('/')} min</div><p style="margin:0">${t.b}</p><div class="muted" style="border-left:3px solid var(--sun);padding-left:8px">“${t.q}” <i>(example review)</i></div>
-<div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto"><div><span class="price">${fm(t.r,t.cur)}/hr</span><div class="incl">${fm(wt(t))}/hr with ${TAX[t.c]||0}% ${t.c} sales tax</div></div><button class="go" onclick="book(${i})" aria-label="Book ${t.n}">Book</button></div></article>`).join(''):'<p>No tutors match. Try fewer filters.</p>'}
+$('list').innerHTML=L.length?L.map(([t,i])=>`<article class="card"><div class="who">${av(i)}<div><h3>${t.n}</h3><div class="muted">${t.c} · ${t.z}</div><span class="badge">✔ NISMCAA Certified</span> <span class="nr">🛡 Under-18 lessons safety-recorded</span><br>${st(t.rt)} ${t.rt.toFixed(1)} (${t.rv})</div></div>
+<div>${t.s.map(x=>`<span class="pill">${x}</span>`).join('')}</div><div>${modeTxt(t)}</div><div class="muted">${t.l} · Speaks ${t.lg.join(', ')} · Offers ${t.d.join('/')} min</div><p style="margin:0">${t.b}</p><div class="muted" style="border-left:3px solid var(--sun);padding-left:8px">“${t.q}”</div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;gap:6px"><div><span class="price">${fm(t.r,t.cur)}/hr</span><div class="incl">${fm(wt(t))}/hr with ${TAX[t.c]||0}% ${t.c} sales tax</div></div><span class="sample-actions"><button type="button" class="unavail" disabled>Not available for now</button></span></div></article>`).join(''):'<p>No tutors match. Try fewer filters.</p>'}
 ['fSub','fPrice','fLang','fTz','fRate','fDur'].forEach(i=>$(i).onchange=render);$('fSub').addEventListener('change',()=>{SUBJ=[];$('subjclr').hidden=true;$('subjnote').textContent='';render()});
 $('mode').onclick=e=>{const b=e.target.closest('button');if(!b)return;MODE=b.dataset.m;[...$('mode').children].forEach(x=>x.classList.toggle('sel',x==b));render()};render();
 $('bbfrom').textContent='From '+fm(Math.min(...T.filter(t=>t.cert).map(t=>t.r)))+'/hr + tax';
@@ -191,4 +190,4 @@ $('mf').onsubmit=e=>{e.preventDefault();const v=$('mi').value.trim();if(!v)retur
 setTimeout(()=>{const s=$('splash');if(!s)return;s.style.opacity=0;setTimeout(()=>s.remove(),500)},1100);
 if(location.hash=='#join')tab('profile');
 if('serviceWorker' in navigator&&location.protocol=='https:')navigator.serviceWorker.register('sw.js');
-</script><script src="geo.js?v=4"></script><script src="live.js?v=11"></script></body></html>
+</script><script src="geo.js?v=4"></script><script src="live.js?v=12"></script></body></html>

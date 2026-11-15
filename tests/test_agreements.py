@@ -69,8 +69,12 @@ class AgreementPageTests(unittest.TestCase):
         self.assertIn("needsClient", js)
         self.assertNotIn("ChatGPT", js)
         self.assertNotIn("GPT", js)
-        # Sample tutors stay unbookable
-        self.assertIn("This is a sample listing so the site does not look empty. It cannot be booked.", js)
+        # Sample tutors stay unbookable, without visible "sample" or "demo" wording
+        self.assertIn("Not available for now", js)
+        self.assertIn("t&&t.sample", js)
+        self.assertNotIn("Sample profile", js)
+        self.assertNotIn("Sample – not bookable", js)
+        self.assertNotIn("This is a sample listing so the site does not look empty. It cannot be booked.", js)
 
 
 if __name__ == "__main__":
