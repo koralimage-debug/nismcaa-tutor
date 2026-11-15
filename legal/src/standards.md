@@ -74,7 +74,7 @@ Each step must be completed before the next one starts. No one teaches until eve
 
 ## A3. ID and background checks
 
-- **Every tutor is checked.** Unlike some marketplaces, our background checks are never optional, and there is no "unchecked" tier.
+- **Every tutor is checked.** Background checks are never optional, and there is no unchecked tier.
 - **Checks by country (to be confirmed with the chosen providers and a lawyer):**
   - **United States:** a consumer background check through an accredited provider, run with your written consent. It covers an SSN trace, national and county criminal records, and the national sex offender registry.
   - **United Kingdom:** an enhanced DBS check with the children's barred list where it is available for this role, otherwise a basic DBS check. Tutors may use the DBS Update Service.
