@@ -130,7 +130,7 @@ class BrandingTests(unittest.TestCase):
         self.assertIn("https://nismcaa-payments.onrender.com", live)
         self.assertIn("https://nismcaa-payments.onrender.com", cert)
         self.assertIn("https://nismcaa-payments.onrender.com", conf)
-        self.assertIn("live.js?v=14", index)
+        self.assertIn("live.js?v=15", index)
         self.assertIn("Learn with certified tutors", index)
 
 
