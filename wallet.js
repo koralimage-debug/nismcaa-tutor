@@ -11,6 +11,7 @@ window.drawPayout=async function(){const el=$('payout-box');if(!el)return;try{co
 function acctCard(w){const d=w.destination;
  if(d.type=='stripe'){return `<div class="panel"><h3>Payout account</h3>${d.ready?'<p class="payout-ok">✅ Your bank account is set up with Stripe. Cash outs go there in US dollars.</p><button onclick="connectPay()">Update bank details</button>':`<p class="payout-warn"><b>Add your bank account.</b> Stripe asks for your name, date of birth and a US dollar bank account (about 5 minutes). Learners can book you once it is done.</p><button class="go" onclick="connectPay()">${d.started?'Continue setup':'Add bank account'}</button>`}<p class="muted small">Stripe keeps your bank details. NISMCAA never sees your full account number.</p></div>`}
  if(d.set)return `<div class="panel"><h3>Payout account</h3><p class="payout-ok">✅ USD domiciliary account: <b>${E(d.bankName)} ••${E(d.last4)}</b><br>${E(d.accountName)}</p><button onclick="usdForm()">Change account</button><div id="usdf"></div></div>`;
+ if(!d.providerReady)return `<div class="panel"><h3>USD (domiciliary) bank account</h3><p>All NISMCAA tutors are paid in <b>US dollars</b>. US dollar payouts for your country are opening soon. You will be able to add your USD (domiciliary) account here, and we will email you when it opens. Learners can book you once it is added.</p></div>`;
  return `<div class="panel"><h3>Add your USD (domiciliary) bank account</h3><p>All NISMCAA tutors are paid in <b>US dollars</b>. Please add a US dollar (domiciliary) account in your name. Learners can book you once it is added.</p><div id="usdf"></div></div>`}
 window.usdForm=function(){const f=$('usdf');if(!f)return;f.innerHTML=`<form id="usdform" class="usdform" autocomplete="off">
  <label>Bank name <span class="req">*</span><input name="bankName" required placeholder="e.g. Zenith Bank"></label>
@@ -44,7 +45,7 @@ async function drawWallet(){const s=$('s-profile');s.innerHTML=tabs()+'<div clas
  h+=`<div class="panel"><h3>Automatic weekly payout</h3><label class="switch"><input type="checkbox" ${w.auto?'checked':''} ${w.ready?'':'disabled'} onchange="setAuto(this.checked)"> Pay my available balance every Friday (from ${usd(w.min)})</label></div>`;
  h+=`<div class="panel"><h3>Earnings</h3>${w.earnings.length?'<ul class="earns">'+w.earnings.map(earning).join('')+'</ul>':'<p class="muted">No lessons yet. Your earnings appear here after each paid lesson.</p>'}</div>`;
  h+=`<div class="panel"><h3>Payout history</h3>${w.payouts.length?'<ul class="pos">'+w.payouts.map(p=>`<li><div><b>${usd(p.amount)} USD</b> <span class="chip ${p.status=='paid'?'done':p.status=='failed'?'bad':'wait'}">${E(p.status=='paid'?'sent':p.status)}</span>${p.auto?' <span class="muted">weekly</span>':''}</div><div class="muted">${day(p.date)} · ${E(p.to)}</div>${p.note?'<div class="muted small">'+E(p.note)+'</div>':''}</li>`).join('')+'</ul>':'<p class="muted">No cash outs yet.</p>'}</div>`;
- s.innerHTML=h;if(w.destination.type=='usd'&&!w.destination.set)usdForm()}
+ s.innerHTML=h;if(w.destination.type=='usd'&&!w.destination.set&&w.destination.providerReady)usdForm()}
 window.drawWallet=drawWallet;
 if(NT.ptab=='payouts')setTimeout(()=>{if(window.tab)tab('profile')},0);
 })();
