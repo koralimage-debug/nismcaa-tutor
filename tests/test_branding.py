@@ -119,7 +119,7 @@ class BrandingTests(unittest.TestCase):
         cert = (ROOT / "cert" / "index.html").read_text()
         conf = (ROOT / "conference" / "index.html").read_text()
         self.assertEqual((ROOT / "CNAME").read_text().strip(), "tutor.nismcaa.com")
-        self.assertIn("Payments are in TEST MODE only: no real money moves.", index)
+        self.assertNotIn("TEST MODE", index)  # payments are live (16 Nov 2026)
         self.assertNotIn("noindex", index.split("<body")[0])
         self.assertNotIn("Preview only", index)
         self.assertIn("geo.js?v=4", index)
