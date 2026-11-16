@@ -12,4 +12,4 @@
 const $=i=>document.getElementById(i),room=(new URLSearchParams(location.search).get('room')||'NISMCAA-Conf-demo').replace(/[^\w-]/g,'');$('rn').textContent='Room: '+room;
 const link='https://meet.jit.si/'+room;$('jJoin').onclick=()=>window.open(link,'_blank','noopener');
 $('jCopy').onclick=()=>{(navigator.clipboard?navigator.clipboard.writeText(link):Promise.reject()).then(()=>$('log').textContent='Invite link copied: '+link).catch(()=>$('log').textContent='Invite link: '+link)};
-$('jTools').onclick=()=>location.href='../room.html?room='+room+'&tool=chat';$('jBoard').onclick=()=>location.href='../board.html?room='+room;</script><script src="../reactions.js"></script></body></html>
+$('jTools').onclick=()=>location.href='../room.html?room='+room+'&tool=chat';$('jBoard').onclick=()=>location.href='../board.html?room='+room;</script><script src="../reactions.js"></script><script src="../paymode.js?v=1" defer></script></body></html>
